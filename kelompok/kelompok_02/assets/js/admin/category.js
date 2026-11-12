@@ -1,24 +1,15 @@
-
-/* =====================================================
-   LABCAT - CATEGORY MANAGEMENT JAVASCRIPT
-   Halaman: categories.php
-   ===================================================== */
-
 document.addEventListener('DOMContentLoaded', () => {
+    const adminToggle = document.querySelector('[data-admin-toggle]');
+    const sidebar = document.querySelector('[data-admin-sidebar]');
+    if (adminToggle && sidebar) {
+        adminToggle.addEventListener('click', () => sidebar.classList.toggle('is-open'));
+    }
 
-    // Konfirmasi sebelum menghapus kategori
-    const deleteForms = document.querySelectorAll('[data-category-delete]');
-
-    deleteForms.forEach((form) => {
+    document.querySelectorAll('[data-category-delete]').forEach((form) => {
         form.addEventListener('submit', (event) => {
-            const confirmed = confirm(
-                'Hapus kategori ini? Kategori yang masih digunakan alat tidak dapat dihapus.'
-            );
-
-            if (!confirmed) {
+            if (!confirm('Yakin ingin menghapus kategori ini?')) {
                 event.preventDefault();
             }
         });
     });
-
 });
