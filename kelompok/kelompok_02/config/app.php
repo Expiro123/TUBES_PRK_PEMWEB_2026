@@ -10,7 +10,11 @@ define('APP_TAGLINE', 'Laboratory Catalog System');
  */
 define(
     'APP_BASE_URL',
-    '/pemweb/TUBES_PRK_PEMWEB_2026/kelompok/kelompok_02'
+<<<<<<< HEAD
+    '../TUBES_PRK_PEMWEB_2026/kelompok/kelompok_02'
+=======
+    '../TUBES_PRK_PEMWEB_2026/kelompok/kelompok_02'
+>>>>>>> staging
 );
 
 define('UPLOAD_DIR', dirname(__DIR__) . DIRECTORY_SEPARATOR . 'uploads');
