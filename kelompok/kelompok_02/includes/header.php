@@ -11,11 +11,7 @@ $flash = get_flash();
     <meta name="description" content="LABCAT adalah katalog informasi peralatan laboratorium Fakultas MIPA.">
     <title><?= e($pageTitle) ?> | LABCAT</title>
     <link rel="stylesheet" href="<?= url('assets/css/user/style.css') ?>">
-    <link rel="stylesheet" href="<?= url('assets/css/admin/category.css') ?>">
     <script defer src="<?= url('assets/js/app.js') ?>"></script>
-    <?php if (($adminActive ?? '') === 'categories'): ?>
-<script defer src="<?= url('assets/js/admin/category.js') ?>"></script>
-<?php endif; ?>
 </head>
 <body>
 <header class="site-header">
