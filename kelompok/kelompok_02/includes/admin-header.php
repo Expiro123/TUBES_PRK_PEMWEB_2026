@@ -9,8 +9,10 @@ $flash = get_flash();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($adminPageTitle) ?> | LABCAT Admin</title>
-    <link rel="stylesheet" href="<?= url('assets/css/style.css') ?>">
-    <script defer src="<?= url('assets/js/app.js') ?>"></script>
+    <link rel="stylesheet" href="<?= url('assets/css/admin/category.css') ?>">
+    <link rel="stylesheet" href="<?= url('assets/css/admin/equipment.css') ?>">
+    <script src="<?= url('assets/js/admin/category.js') ?>" defer></script>
+    <script src="<?= url('assets/js/admin/equipment.js') ?>" defer></script>
 </head>
 <body class="admin-body">
 <div class="admin-shell">
