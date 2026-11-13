@@ -73,11 +73,15 @@ Tujuan pengembangan FEBMart adalah:
 - Menambahkan produk ke keranjang belanja.
 - Mengubah jumlah barang.
 - Menghapus produk dari keranjang.
+- Menyinkronkan harga dan stok keranjang dengan data terbaru.
 - Menghitung subtotal dan total pembayaran.
 - Memasukkan nominal pembayaran.
+- Menyediakan shortcut nominal pembayaran.
 - Menghitung uang kembalian secara otomatis.
 - Menyimpan transaksi dan detail transaksi.
 - Memotong stok barang secara otomatis setelah transaksi berhasil.
+- Memvalidasi input transaksi dan melindungi aksi kasir dengan CSRF token.
+- Menampilkan pesan error jika tabel transaksi gagal disiapkan.
 
 ### D. Riwayat Transaksi, Laporan & Cetak Struk
 - Menampilkan riwayat transaksi.
@@ -87,7 +91,12 @@ Tujuan pengembangan FEBMart adalah:
 - Menghitung total omzet.
 - Menampilkan nota atau struk pembayaran.
 - Mencetak struk transaksi.
-- Mengekspor laporan ke format Excel.
+- Mengekspor laporan penjualan ke CSV berformat UTF-8 yang dapat dibuka di Microsoft Excel.
+
+Halaman riwayat tersedia di `riwayat/index.php`. Detail transaksi dapat dibuka melalui
+modal atau struk; halaman struk menyediakan tombol cetak dengan tata letak khusus
+untuk kertas cetak. Laporan tersedia di `laporan/index.php`, menggunakan rentang
+tanggal inklusif, dan dapat diekspor melalui tombol **Ekspor Excel**.
 
 ### E. UI/UX & Layout Website
 - Menggunakan template AdminLTE dan Bootstrap.
