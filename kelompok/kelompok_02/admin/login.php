@@ -80,8 +80,8 @@ $flash = get_flash();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Admin | LABCAT</title>
-    <link rel="stylesheet" href="<?= url('assets/css/admin/auth.css') ?>">
-    <script defer src="<?= url('assets/js/admin/auth.js') ?>"></script>
+    <link rel="stylesheet" href="<?= url('assets/css/admin/auth.css') ?>?v=<?= time() ?>">
+    <script defer src="<?= url('assets/js/admin/auth.js') ?>?v=<?= time() ?>"></script>
 </head>
 <body class="login-page">
     <div class="login-card">
@@ -126,12 +126,10 @@ $flash = get_flash();
             </div>
 
             <!-- Fitur Ingat Saya -->
-            <div class="remember-row">
-                <label class="remember-label">
-                    <input type="checkbox" name="remember_me" value="1" <?= !empty($_COOKIE['remember_admin_email']) ? 'checked' : '' ?>>
-                    <span>Ingat Saya</span>
-                </label>
-            </div>
+           <div class="remember-row">
+            <input type="checkbox" id="remember_me" name="remember_me" value="1" <?= !empty($_COOKIE['remember_admin_email']) ? 'checked' : '' ?>>
+            <label for="remember_me" class="remember-label">Ingat Saya</label>
+        </div>
 
             <button class="btn btn-primary btn-block" type="submit" <?= $isLocked ? 'disabled' : '' ?>>
                 <?= $isLocked ? 'Terkunci Sementara' : 'Masuk ke Dashboard <span>→</span>' ?>
